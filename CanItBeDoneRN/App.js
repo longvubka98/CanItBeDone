@@ -2,7 +2,7 @@ import React from "react";
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from "@react-navigation/stack";
 import Snapchat from "./src/SnapChat";
-// import Test from "./src/SnapChat/Test";
+import ListProject from './src/ListProject'
 
 const Stack = createStackNavigator()
 
@@ -11,9 +11,15 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name='SnapChat'
+          name='ListProject'
+          component={ListProject}
+        />
+        <Stack.Screen
+          name='Snapchat'
           component={Snapchat}
-          options={{ headerShown: false }}
+          options={{
+            title: "👻 Snapchat",
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
