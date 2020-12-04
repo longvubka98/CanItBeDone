@@ -2,6 +2,7 @@ import React from "react";
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from "@react-navigation/stack";
 import Snapchat from "./src/SnapChat";
+import PhilzCoffee from "./src/PhilzCoffee";
 import ListProject from './src/ListProject'
 
 const Stack = createStackNavigator()
@@ -13,6 +14,13 @@ const App = () => {
         <Stack.Screen
           name='ListProject'
           component={ListProject}
+        />
+        <Stack.Screen
+          name="PhilzCoffee"
+          component={PhilzCoffee}
+          options={{
+            title: "☕️ Philz Coffee",
+          }}
         />
         <Stack.Screen
           name='Snapchat'
